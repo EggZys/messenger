@@ -13,7 +13,7 @@ def send_message():
         chat_log.configure(state=tk.DISABLED)
         text_area.delete("1.0", tk.END) # Очищаем многострочное поле
         try:
-            sock.sendall(f"{nickname}: {message}".encode())
+            sock.sendall(f"Вы: {message}".encode())
         except Exception as e:
             chat_log.configure(state=tk.NORMAL)
             chat_log.insert(tk.END, f"Ошибка отправки: {e}\n")
