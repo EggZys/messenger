@@ -8,12 +8,12 @@ def send_message():
     message = text_area.get("1.0", tk.END).strip()
     if message:
         chat_log.configure(state=tk.NORMAL)
-        chat_log.insert(tk.END, f"{message}\n")  # Используем глобальную nickname
+        chat_log.insert(tk.END, f"Вы: {message}\n")  # Используем глобальную nickname
         chat_log.see(tk.END)
         chat_log.configure(state=tk.DISABLED)
         text_area.delete("1.0", tk.END)
         try:
-            sock.sendall(f"Вы: {message}".encode())
+            sock.sendall(f"{nickname}: {message}".encode())
         except Exception as e:
             chat_log.configure(state=tk.NORMAL)
             chat_log.insert(tk.END, f"Ошибка отправки: {e}\n")
