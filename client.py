@@ -98,13 +98,13 @@ if __name__ == "__main__":
     host_label.grid(row=0, column=0)
     host_entry = tk.Entry(connect_frame)
     host_entry.grid(row=0, column=1)
-    host_entry.insert(0, "185.149.50.20") # Замените на ваш публичный IP или доменное имя
+    host_entry.insert(0, "10.14.34.69") # Замените на ваш публичный IP или доменное имя
 
     port_label = tk.Label(connect_frame, text="Порт:")
     port_label.grid(row=1, column=0)
     port_entry = tk.Entry(connect_frame)
     port_entry.grid(row=1, column=1)
-    port_entry.insert(0, "22837")
+    port_entry.insert(0, "65432")
 
     nickname_label = tk.Label(connect_frame, text="Никнейм:")
     nickname_label.grid(row=2, column=0)
